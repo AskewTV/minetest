@@ -6,8 +6,8 @@ if(${CMAKE_VERSION} STREQUAL "2.8.2")
 endif()
 
 # This can be read from ${PROJECT_NAME} after project() is called
-project(minetest)
-set(PROJECT_NAME_CAPITALIZED "Minetest")
+project(voxels)
+set(PROJECT_NAME_CAPITALIZED "Voxels")
 
 
 # Also remember to set PROTOCOL_VERSION in network/networkprotocol.h when releasing
@@ -168,17 +168,17 @@ install(FILES "README.txt" DESTINATION "${DOCDIR}")
 install(FILES "doc/lua_api.txt" DESTINATION "${DOCDIR}")
 install(FILES "doc/menu_lua_api.txt" DESTINATION "${DOCDIR}")
 install(FILES "doc/world_format.txt" DESTINATION "${DOCDIR}")
-install(FILES "minetest.conf.example" DESTINATION "${EXAMPLE_CONF_DIR}")
+install(FILES "voxels.conf.example" DESTINATION "${EXAMPLE_CONF_DIR}")
 
 if(UNIX AND NOT APPLE)
-	install(FILES "doc/minetest.6" "doc/minetestserver.6" DESTINATION "${MANDIR}/man6")
-	install(FILES "misc/minetest.desktop" DESTINATION "${XDG_APPS_DIR}")
-	install(FILES "misc/minetest.appdata.xml" DESTINATION "${APPDATADIR}")
-	install(FILES "misc/minetest.svg" DESTINATION "${ICONDIR}/hicolor/scalable/apps")
+	install(FILES "doc/voxels.6" "doc/minetestserver.6" DESTINATION "${MANDIR}/man6")
+	install(FILES "misc/voxels.desktop" DESTINATION "${XDG_APPS_DIR}")
+	install(FILES "misc/voxels.appdata.xml" DESTINATION "${APPDATADIR}")
+	install(FILES "misc/voxels.svg" DESTINATION "${ICONDIR}/hicolor/scalable/apps")
 endif()
 
 if(APPLE)
-	install(FILES "misc/minetest-icon.icns" DESTINATION "${SHAREDIR}")
+	install(FILES "misc/voxels-icon.icns" DESTINATION "${SHAREDIR}")
 	install(FILES "misc/Info.plist" DESTINATION "${BUNDLE_PATH}/Contents")
 endif()
 
